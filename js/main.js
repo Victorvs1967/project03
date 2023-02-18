@@ -28,13 +28,17 @@ form.querySelector('.button').addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // paralax image
   let layer = document.querySelector('.price-image');
   document.addEventListener('mousemove', event => {
     layer.style.transform = 'translate3d(' + ((event.clientX * 0.4) / 8) + 'px, ' + ((event.clientY * 0.4) / 8) + 'px, 0px)';
   });
-
+  
+  // move with scrolling
   const elem = document.querySelector('.main');
   document.addEventListener('scroll', () => {
     elem.style.backgroundPositionX = '0' + (.3 * window.pageYOffset) + 'px';
   });
+
 });
